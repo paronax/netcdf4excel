@@ -1,0 +1,67 @@
+; VbNc.def : Declares the module parameters for the DLL.
+
+LIBRARY      "vbnc"
+DESCRIPTION  'NetCDF For Excel Windows Dynamic Link Library'
+
+EXPORTS
+	vbnc_nc_create
+	vbnc_nc_open
+	vbnc_nc_enddef
+	vbnc_nc_redef
+	vbnc_nc_close
+	vbnc_nc_inq_nvars
+	vbnc_nc_inq_varid
+	vbnc_nc_inq_varname
+	vbnc_nc_inq_vartype
+	vbnc_nc_inq_varids
+	vbnc_nc_get_var_int
+	vbnc_nc_get_var_schar
+	vbnc_nc_get_var_short
+	vbnc_nc_get_var_float
+	vbnc_nc_get_var_double
+	vbnc_nc_get_var_text
+	vbnc_nc_inq_varnatts
+	vbnc_nc_inq_varndims
+	vbnc_nc_inq_vardimid
+	vbnc_nc_def_var
+	vbnc_nc_put_var_int
+	vbnc_nc_put_var_schar
+	vbnc_nc_put_var_short
+	vbnc_nc_put_var_float
+	vbnc_nc_put_var_double
+	vbnc_nc_put_var_text
+	vbnc_nc_get_vara_int
+	vbnc_nc_get_vara_schar
+	vbnc_nc_get_vara_short
+	vbnc_nc_get_vara_float
+	vbnc_nc_get_vara_double
+	vbnc_nc_get_vara_text
+	vbnc_nc_put_vara_int
+	vbnc_nc_put_vara_schar
+	vbnc_nc_put_vara_short
+	vbnc_nc_put_vara_float
+	vbnc_nc_put_vara_double
+	vbnc_nc_put_vara_text
+	vbnc_nc_inq_ndims
+	vbnc_nc_inq_dimid
+	vbnc_nc_inq_dimlen
+	vbnc_nc_inq_dimname
+	vbnc_nc_def_dim
+	vbnc_nc_inq_natts
+	vbnc_nc_inq_attlen
+	vbnc_nc_inq_attname
+	vbnc_nc_inq_atttype
+	vbnc_nc_get_att_text
+	vbnc_nc_get_att_float
+	vbnc_nc_get_att_schar
+	vbnc_nc_get_att_short
+	vbnc_nc_get_att_int
+	vbnc_nc_get_att_long
+	vbnc_nc_get_att_double
+	vbnc_nc_put_att_text
+	vbnc_nc_put_att_float
+	vbnc_nc_put_att_schar
+	vbnc_nc_put_att_short
+	vbnc_nc_put_att_int
+	vbnc_nc_put_att_long
+	vbnc_nc_put_att_double
