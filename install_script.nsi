@@ -1,7 +1,7 @@
-# Install Script for NetCDF4Excel_2007
+# Install Script for NetCDF4Excel
 
 # define installer name
-outFile "NetCDF4Excel_3_3_setup.exe"
+outFile "NetCDF4Excel_3_4_setup.exe"
  
 # set ProgramFiles as default install directory
 installDir $PROGRAMFILES\NetCDF4Excel
@@ -17,11 +17,11 @@ Name "NetCDF4Excel"
 ;--------------------------------
 ;Version Information
 
-VIProductVersion "3.3.0.0 "
+VIProductVersion "3.4.0.0 "
 VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "NetCDF4Excel"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "Copyright 2008 - 2017 Alexander Bruhns"
-VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "Excel 2007 Add-In for NetcDF"
-VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "3.3"
+VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "Excel Add-In for NetcDF"
+VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "3.4"
 
 ;--------------------------------
 Page license
@@ -38,7 +38,10 @@ section
 		setOutPath $INSTDIR
 		 
 		# specify file to go in output path
-		file VbNc\Release\VbNc.dll
+		file VbNc\install\vbnc.dll
+		file VbNc\install\netcdf.dll
+		file VbNc\install\hdf5_hl.dll
+		file VbNc\install\hdf5.dll
 		file NetCDF4Excel_2007.xlsm
 		 
 		# define uninstaller name
@@ -64,7 +67,10 @@ section "Uninstall"
 		delete $INSTDIR\uninstaller.exe
 		 
 		# now delete installed file
-		delete $INSTDIR\VbNc.dll
+		delete $INSTDIR\vbnc.dll
+		delete $INSTDIR\netcdf.dll
+		delete $INSTDIR\hdf5.dll
+		delete $INSTDIR\hdf5_hl.dll
 		delete $INSTDIR\NetCDF4Excel_2007.xlsm
 		RMDIR $INSTDIR
 		delete "$SMPROGRAMS\NetCDF4Excel\Uninstall.lnk"
